@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Sacramento&family=Work+Sans:wght@100;400;700&display=swap');
+
+:root {
+    --bg: #1d1e22
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: roboto;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bg);
+    background-image: url(img/b67115f4a59ded8bdba893defebc4285.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 1000vw;
+    height: 400px;
+    background-color: grey;
+    max-width: 600px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 5px;
+
+}
+
+body.over .container {
+    cursor: no-drop;
+}
+
+body.over .container .item {
+    pointer-events: none;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+}
+
+.playerTitle {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.playerX {
+    background: url(img/a901b62c88b50b3a3f2f6cb0095be2ea.jpg) no-repeat center / 50%;
+    background-color: black;
+}
+
+.computer {
+    background: url(img/9a8c68e6472dde2c44039959039e3fe9.jpg) no-repeat center / 50%;
+    background-color: black;
+}
+
+.rematch {
+    cursor: pointer;
+    padding: 20px 5px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 30px;
+    opacity: 0;
+    display: none;
+}
+
+body.over .rematch {
+    opacity: 1;
+    display: inline-block;
+}
